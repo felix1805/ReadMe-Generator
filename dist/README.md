@@ -1,20 +1,20 @@
 
-  # Title
-  Project
-  ## Description
-  Description
-  ## Table of Contents
-  Contents
-  ## Installation
-  Instal
-  ## Usage
-  Usage
-  ## Contributions
-  contri
-  ## License
+# Title
+  title
+## Description
+  desc
+## Table of Contents
+  tabl
+## Installation
+  install
+## Usage
+  usage
+## Contributions
+  contr
+## License
   MIT
-  ## GitHub
+## GitHub
   git
-  ## Questions
+## Questions
   email
   

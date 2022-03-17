@@ -6,12 +6,12 @@ const generateMarkdown = require('./utils/generateMarkdown');
 const questions = [
     {
         type: 'input',
-        message: 'Type the title of your Project ',
+        message: 'Type the title of your Project',
         name: 'Title',
     },
     {
         type: 'input',
-        message: 'Enter a project description',
+        message: 'Enter a Project description',
         name: 'Description',
     },
     {
@@ -31,7 +31,7 @@ const questions = [
     },
     {
         type: 'input',
-        message: 'Enter the contribution information for your Project',
+        message: 'Enter the contribution guidlines for your Project',
         name: 'Contributing',
     },
     {
@@ -53,7 +53,7 @@ const questions = [
     },
     {
         type: 'input',
-        message: 'Enter GitHub username',
+        message: 'Enter your GitHub username',
         name: 'GitHub',
     },
     {
