@@ -16,6 +16,11 @@ const questions = [
     },
     {
         type: 'input',
+        message: 'Enter your Table of Contents',
+        name: 'Contents',
+    },
+    {
+        type: 'input',
         message: 'Enter the installation instructions for your Project',
         name: 'Installation',
     },
@@ -37,8 +42,24 @@ const questions = [
     {
         type: 'list',
         message: 'Which license are your using?',
-        choices: ['apache', 'GNU', 'MIT', 'BSD2', 'BSD3'],
+        choices: [
+        { name: 'Apache', value: 'apache' },
+        { name: 'GNU', value: 'GNU' },
+        { name: 'MIT', value: 'MIT' },
+        { name: 'BSD2', value: 'BSD2' },
+        { name: 'BSD3', value: 'BSD3' },
+    ],
         name: 'License',
+    },
+    {
+        type: 'input',
+        message: 'Enter GitHub username',
+        name: 'GitHub',
+    },
+    {
+        type: 'input',
+        message: 'What is your email address?',
+        name: 'Email',
     }
 ];
 
@@ -46,32 +67,20 @@ const questions = [
 function writeToFile(fileName, data) {
     inquirer
         .prompt(questions)
-        .then(answers => {
-            const readMeTemplate = `
-        # Title
-        ${answers['Title']}
-        ## Description
-        ${answers['Description']}
-        ## Table of Contents
-        ${answers['Contents']}
-        ## Installation
-        ${answers['Installation']}
-        ## Usage
-        ${answers['Usage']}
-        ## License
-        ${answers['License']}
-        `
+        .then(data => {
+            const readMeTemplate =
+            generateMarkdown(data);
             fs.writeFile(fileName, readMeTemplate, (err) => {
                 err ? console.error(err) : console.log('success!')
             });
 
-        }
-    }
+        })
+}
 
 // TODO: Create a function to initialize app
 function init() {
-    writeToFile(fileName, data);
-};
+    writeToFile('./dist/README.md', questions);
+}
 
 // Function call to initialize app
 init();

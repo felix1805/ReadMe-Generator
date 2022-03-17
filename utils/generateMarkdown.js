@@ -14,20 +14,25 @@ function renderLicenseSection(license) {}
 function generateMarkdown(data) {
   return  `
   # Title
-  ${answers['Title']}
+  ${data['Title']}
   ## Description
-  ${answers['Description']}
+  ${data['Description']}
   ## Table of Contents
-  ${answers['Contents']}
+  ${data['Contents']}
   ## Installation
-  ${answers['Installation']}
+  ${data['Installation']}
   ## Usage
-  ${answers['Usage']}
+  ${data['Usage']}
+  ## Contributions
+  ${data['Contributing']}
   ## License
-  ${answers['License']}
+  ${data['License']}
+  ## GitHub
+  ${data['GitHub']}
+  ## Questions
+  ${data['Email']}
   `;
-  fs.writeFile(fileName, readMeTemplate, (err) => {
-    err ? console.error(err) : console.log('success!')})}
+}
 
-    
+
 module.exports = generateMarkdown;
