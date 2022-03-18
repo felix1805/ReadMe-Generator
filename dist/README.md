@@ -1,20 +1,20 @@
 
 # Title
-  title
+  Project 1
 ## Description
-  desc
+  README Generator
 ## Table of Contents
-  tabl
+  TOC
 ## Installation
-  install
+  Uses index.js to run
 ## Usage
-  usage
+  use in vs code or terminal
 ## Contributions
-  contr
+  none
 ## License
-  MIT
+  GNU
 ## GitHub
-  git
+  felix1805
 ## Questions
-  email
+  felix1805@gmail.com
   
